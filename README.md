@@ -147,7 +147,7 @@ https://<ARGOCD-EXTERNAL-IP>
 
 ---
 
-## 4. Deploying NGINX via ArgoCD (GitOps)
+## 4. Deploying NGINX via ArgoCD
 
 ```bash
 kubectl apply -f argocd/application.yaml
@@ -172,23 +172,6 @@ Visit:
 http://<NGINX-LB-EXTERNAL-IP>
 ```
 
----
-
-## Bonus – Ingress + ALB + Custom Domain
-
-```bash
-kubectl apply -f manifests/ingress.yaml
-kubectl get ingress
-```
-
-Example access:
-```
-http://<ALB-DNS-NAME>
-```
-
-Optional domain example:
-```
-http://nginx.<your-domain>
 ```
 
 ---
@@ -210,7 +193,6 @@ terraform destroy
 | NGINX deployed |  Completed |
 | ArgoCD installed & synced |  Completed |
 | Access via LoadBalancer |  Completed |
-| Ingress + DNS (Bonus) |  Completed |
 
 ---
 
